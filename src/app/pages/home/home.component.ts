@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MovieService } from 'src/app/services/movie/movie.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _movieService: MovieService) { }
 
   ngOnInit() {
+
+    this._movieService.getTvPopular()
+      .subscribe(
+        res => {
+          console.log("res: ", res);
+      },
+      err => {
+
+      });
   }
 
 }

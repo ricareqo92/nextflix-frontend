@@ -1,0 +1,132 @@
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+.banner{
+	background: gray;
+	min-height: 100vh;
+	background-image: url(
+	'https://s3.amazonaws.com/ivacy-website-images/wp-content/uploads/2018/12/06162924/la-casa.jpg'
+	);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.w-90{
+	width: 90%;
+}	
+.w-50{
+	width: 50%;
+}
+.w-10{
+	width: 10%;
+}
+
+/*Header*/
+header{
+	display: flex;
+	padding: 30px 20px 0px 30px;
+
+}
+header h1{
+	color: red;
+	letter-spacing: 2px
+}
+nav{
+	display: flex;
+	justify-content: space-around;
+}
+ul{
+	display: flex;
+}
+ul li{
+	list-style: none;
+	margin: 0 10px 0 10px;
+}
+ul li a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 0 10px 0;
+	font-size: 1.1rem;
+}
+header .bell{
+	font-size: 1.3rem;
+}
+header .img{
+	width: 35px;
+	height: 35px;
+}
+header .img-content{
+	display: flex;
+}
+header .img-content .sort{
+	margin: 0 0 0 4px;
+}
+header .sin-padding{
+	padding: 5px 0 0 0;
+}
+
+/*Fin header*/
+
+/*Container*/
+.container{
+	margin: 120px 0 0 30px;
+	color: #fff;
+	display: flex;
+}
+.container .n{
+	color: red;
+	font-size: 2rem;
+}
+.container  h2, a, p{
+	padding: 20px 0 20px 0;
+}
+.container h3{
+	font-size: 1.2rem;
+	letter-spacing: 5px;
+}
+.container h2{
+	font-size: 3.2rem;
+}
+.container a{
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px 30px 10px 30px;
+	font-size: 1.1rem;
+	background: rgba(209, 208, 192, .2);
+	margin: 0 5px 0 0;
+	border-radius: 2px;
+}
+.container .play{
+	margin: 0 10px 0 0;
+}
+.container p{
+	font-size: 1.2rem;
+}
+.r{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+.r p{
+	background:  rgba(209, 208, 192, .2);
+	padding: 5px 50px 5px 10px;
+	margin: 20px 0 20px 0;
+	border-left: 5px solid #fff;
+}
+.rigth{
+	display: flex;
+	justify-content: flex-end;
+}
+/*Fin container*/
+
+
+
+
