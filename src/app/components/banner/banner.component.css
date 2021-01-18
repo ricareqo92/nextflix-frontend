@@ -10,7 +10,7 @@ body{
 }
 .banner{
 	background: gray;
-	min-height: 100vh;
+    height: 600px !important;
 	background-image: url(
 	'https://s3.amazonaws.com/ivacy-website-images/wp-content/uploads/2018/12/06162924/la-casa.jpg'
 	);
