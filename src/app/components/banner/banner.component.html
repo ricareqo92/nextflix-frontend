@@ -50,14 +50,14 @@
       <div class="location" id="home">
           <h1 id="home">Popular on Netflix</h1>
           <div class="box" *ngIf="moviePop">
-            <a href="" *ngFor="let item of moviePop.results"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
+            <a href="" *ngFor="let item of moviePop.results.slice(0,10)"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
           </div>
       </div>
 
 
       <h1 id="myList">Trending Now</h1>
       <div class="box" *ngIf="moviePop">
-        <a href="" *ngFor="let item of moviePop.results"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
+        <a href="" *ngFor="let item of moviePop.results.slice(0,10)" ><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
       </div>
 
       <h1 id="tvShows">TV Shows</h1>
