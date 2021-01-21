@@ -1,0 +1,13 @@
+<div class="container">
+    <h3 style="margin-top: 5%;">Películas Favoritas</h3>
+    <div class="row mt-5">
+        <div *ngFor="let movie of movies" class="col-md-3">
+            <div class="card w-100 mb-5 shadow-custom" style="width: 18rem;">
+                <img [src]="baseUrl + movie.poster_path" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <a (click)="deleteMovie(movie.id)" class="btn btn-danger">Borrar</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
