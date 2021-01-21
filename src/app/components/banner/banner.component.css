@@ -1,6 +1,3 @@
-
-
-
 /* CSS VARIABLES */
 :root {
   --primary: #141414;
@@ -21,7 +18,7 @@ html, body {
 }
 
 img {
-  max-width: 95%;
+  max-width: 100%;
 }
 
 h1 {
@@ -46,21 +43,19 @@ header {
   background-color: var(--primary);
   width: 100%;
   margin-bottom: 0px;
-  margin-top: 0px;
 }
 
 .netflixLogo {
   grid-area: nt;
   object-fit: cover;
-  width: 100px;
-  max-height: 100%;
+
 
   padding-left: 30px;
   padding-top: 0px;
 }
 
 .netflixLogo img {
-  height: 35px;
+  height: 55px;
 }
 
 #logo {
@@ -287,20 +282,77 @@ footer {
 
 
 }
+
 .banner{
-	background: gray;
-	min-height: 100vh;
-	background-image: url(
-	'https://s3.amazonaws.com/ivacy-website-images/wp-content/uploads/2018/12/06162924/la-casa.jpg'
-	);
+	background: black;
 	background-repeat: no-repeat;
-	background-size: cover;
+  background-size: cover;
+
+    height: 500px;
+    width: 100%;
+
 }
 
-.container{
-	margin: 4s0px 0 0 30px;
-	color: #fff;
+.w-90{
+  width: 100%;
+  padding-top: 10%;
+}
+.w-50{
+	width: 50%;
+}
+.w-10{
+	width: 10%;
+}
+
+/*Header*/
+header{
+  display: flex;
+  justify-content: space-between;
+
+
+}
+
+
+ul{
 	display: flex;
+}
+ul li{
+	list-style: none;
+	margin: 0 10px 0 10px;
+}
+ul li a{
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 0 10px 0;
+	font-size: 1.1rem;
+}
+header .bell{
+	font-size: 1.3rem;
+}
+header .img{
+	width: 35px;
+	height: 55px;
+}
+header .img-content{
+	display: flex;
+}
+header .img-content .sort{
+	margin: 0 0 0 4px;
+}
+header .sin-padding{
+	padding: 5px 0 0 0;
+}
+
+/*Fin header*/
+
+/*Container*/
+.container{
+	margin: 0 10 10 0;
+	color: #fff;
+  display: flex;
+  align-content:center;
+  padding-top: 10%;
 }
 .container .n{
 	color: red;
@@ -352,15 +404,7 @@ footer {
 
 
 
-.w-90{
-	width: 90%;
-}
-.w-50{
-	width: 50%;
-}
-.w-10{
-	width: 10%;
-}
+
 
 header .img{
 	width: 35px;
