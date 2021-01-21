@@ -14,4 +14,12 @@ export class MovieService {
   public getTvPopular(): Observable<any> {
     return this.http.get('https://api.themoviedb.org/3/tv/popular?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1');
   }
+  public getMovieFirst(): Observable<any> {
+    return this.http.get('https://api.themoviedb.org/3/trending/all/day?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1');
+  }
+
+  public getMoviesTop10(): Observable<any> {
+    return this.http.get('https://api.themoviedb.org/3/trending/all/day?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1');
+  }
+
 }

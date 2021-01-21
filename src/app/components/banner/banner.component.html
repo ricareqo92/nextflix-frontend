@@ -1,11 +1,11 @@
 
 
     <!-- HEADER -->
-    <div class="banner">
+    <div id="banner" class="banner">
 
     <header>
       <div class="netflixLogo">
-        <a id="logo" href="#home"><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/logo.PNG?raw=true" alt="Logo Image"></a>
+        <a id="logo" href="#home"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="Logo Image"></a>
       </div>
       <nav class="main-nav">
         <a href="#home">Home</a>
@@ -16,26 +16,23 @@
         <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfolio</a>
       </nav>
       <nav class="sub-nav">
-        <a href="#"><i class="fas fa-search sub-nav-logo"></i></a>
+        <div class="form-group has-search">
+          <input type="text"  placeholder="Search" (keyup)="search($event)">
+        </div>
         <a href="#"><i class="fas fa-bell sub-nav-logo"></i></a>
         <a href="#">Account</a>
       </nav>
 
     </header>
-    <div class="container">
+    <div class="container main-container">
       <div class="w-90">
-        <h3><span class="n">N</span> Serie</h3>
-        <h2>LA CASA DE PAPEL</h2>
+
+        <h2 *ngIf="movie">{{movie.name}}</h2>
+
         <a href="#"><i class="play fas fa-play"></i>Reproducir</a>
         <a href="#"><i class="play fas fa-plus"></i>Mi lista</a>
-        <p>
-          Una banda organizada de ladrones tiene el objetivo de cometer el atraco
-          <br>
-          del siglo en la Fábrica Nacional de Moneda y Timbre. Cinco meses de
-          <br>
-          preparación quedarán reducidos a once días para poder llevar a cabo
-          <br>
-          con éxito el gran golpe.
+        <p *ngIf="movie">
+          {{movie.overview}}
         </p>
       </div>
       <div class="w-10 r">
@@ -52,32 +49,15 @@
     <section class="main-container" >
       <div class="location" id="home">
           <h1 id="home">Popular on Netflix</h1>
-          <div class="box">
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p1.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p2.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p3.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p4.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p5.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p6.PNG?raw=true" alt=""></a>
-
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p7.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p8.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p9.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p10.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p11.PNG?raw=true" alt=""></a>
-            <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/p12.PNG?raw=true" alt=""></a>
+          <div class="box" *ngIf="moviePop">
+            <a href="" *ngFor="let item of moviePop.results"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
           </div>
       </div>
 
 
       <h1 id="myList">Trending Now</h1>
-      <div class="box">
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t1.PNG?raw=true" alt=""></a>
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t2.PNG?raw=true" alt=""></a>
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t3.PNG?raw=true" alt=""></a>
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t4.PNG?raw=true" alt=""></a>
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t5.PNG?raw=true" alt=""></a>
-        <a href=""><img src="https://github.com/carlosavilae/Netflix-Clone/blob/master/img/t6.PNG?raw=true" alt=""></a>
+      <div class="box" *ngIf="moviePop">
+        <a href="" *ngFor="let item of moviePop.results"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
       </div>
 
       <h1 id="tvShows">TV Shows</h1>
