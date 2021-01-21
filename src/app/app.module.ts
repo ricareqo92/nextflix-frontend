@@ -16,7 +16,6 @@ import { MovieListComponent } from './components/movie-list/movie-list.component
 @NgModule({
   declarations: [
     AppComponent,
-    BannerComponent,
     SearchComponent,
     MovieItemComponent,
     MovieListComponent

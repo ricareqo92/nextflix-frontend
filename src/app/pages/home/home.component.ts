@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     this.getMovieFirst();
   }
   getMovieFirst(){
-  this._movieService.getMovieFirst()
+  this._movieService.getTrending()
   .subscribe(
     res => {
 

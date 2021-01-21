@@ -17,24 +17,18 @@ export class MovieService {
   public getTvPopular(): Observable<any> {
     return this.http.get(`${this.URL}tv/popular?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1`);
   }
-  
+
   public getTrending(): Observable<any> {
     return this.http.get(`${this.URL}trending/all/day?api_key=12d5adbd48868887ee10cd978312d4be`)
   }
-  
+
   public getTopRated(): Observable<any> {
     return this.http.get(`${this.URL}movie/top_rated?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1`)
   }
-  
+
   public getMovieDetail(movieId: Number): Observable<any> {
     return this.http.get(`${this.URL}movie/${movieId}?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US`)
   }
-  public getMovieFirst(): Observable<any> {
-    return this.http.get('https://api.themoviedb.org/3/trending/all/day?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1');
-  }
 
-  public getMoviesTop10(): Observable<any> {
-    return this.http.get('https://api.themoviedb.org/3/trending/all/day?api_key=12d5adbd48868887ee10cd978312d4be&language=en-US&page=1');
-  }
 
 }
