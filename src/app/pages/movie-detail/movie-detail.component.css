@@ -56,7 +56,10 @@ a {
   padding: 4rem 2rem;
 }
 .title {
-  padding-bottom: 1rem
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .title a h2 {
   display:inline-block;

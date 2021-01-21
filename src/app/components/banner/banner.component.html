@@ -1,97 +1,35 @@
-
-
-    <!-- HEADER -->
-    <div id="banner" class="banner">
-
-    <header>
+<!-- HEADER -->
+<div id="banner" class="banner">
+  <header>
       <div class="netflixLogo">
-        <a id="logo" href="#home"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="Logo Image"></a>
+      <a id="logo" href="#home"><img src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" alt="Logo Image"></a>
       </div>
       <nav class="main-nav">
-        <a href="#home">Home</a>
-        <a href="#tvShows">TV Shows</a>
-        <a href="#movies">Movies</a>
-        <a href="#originals">Originals</a>
-        <a href="#">Recently Added</a>
-        <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfolio</a>
+          <a href="#home">Home</a>
+          <a href="#tvShows">TV Shows</a>
+          <a href="#movies">Movies</a>
+          <a href="#originals">Originals</a>
+          <a href="#">Recently Added</a>
+          <a target="_blank" href="https://codepen.io/cb2307/full/NzaOrm">Portfolio</a>
       </nav>
       <nav class="sub-nav">
-        <div class="form-group has-search">
-          <input type="text"  placeholder="Search" (keyup)="search($event)">
-        </div>
-
-
+          <div class="form-group has-search">
+              <input type="text"  placeholder="Search" (keyup)="search($event)">
+          </div>
       </nav>
-
-    </header>
-
-    <div class="container main-container">
+  </header>
+  <div class="container main-container">
       <div class="w-90">
-
-        <h2 *ngIf="movie">{{movie.name}}</h2>
-
-        <a href="#"><i class="play fas fa-play"></i>Reproducir</a>
-        <a href="#"><i class="play fas fa-plus"></i>Mi lista</a>
-        <p *ngIf="movie">
-          {{movie.overview}}
-        </p>
+          <h2 *ngIf="movie">{{movie.name}}</h2>
+          <a href="#"><i class="play fas fa-play"></i>Reproducir</a>
+          <a href="#"><i class="play fas fa-plus"></i>Mi lista</a>
+          <p *ngIf="movie">
+              {{movie.overview}}
+          </p>
       </div>
       <div class="w-10 r">
-        <p>R</p>
+          <p>R</p>
       </div>
-    </div>
-
   </div>
-
-
-    <!-- END OF HEADER -->
-
-    <!-- MAIN CONTAINER -->
-    <section class="main-container" >
-      <div class="location" id="home">
-          <h1 id="home">Popular on Netflix</h1>
-          <div class="box" *ngIf="moviePop">
-            <a href="" *ngFor="let item of moviePop.results.slice(0,10)"><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
-          </div>
-      </div>
-
-
-      <h1 id="myList">Trending Now</h1>
-      <div class="box" *ngIf="movieTvPopular">
-        <a href="" *ngFor="let item of movieTvPopular.results.slice(0,10)" ><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
-      </div>
-
-      <h1 id="tvShows">TOP 4</h1>
-      <div class="box" *ngIf="movieTop">
-        <a href="" *ngFor="let item of movieTop.results.slice(0,4)" ><img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{item.poster_path}}" alt=""></a>
-      </div>
-
-    <!-- END OF MAIN CONTAINER -->
-
-    <!-- LINKS -->
-    <section class="link">
-      <div class="logos">
-        <a href="#"><i class="fab fa-facebook-square fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-twitter fa-2x logo"></i></a>
-        <a href="#"><i class="fab fa-youtube fa-2x logo"></i></a>
-      </div>
-      <div class="sub-links">
-        <ul>
-          <li><a href="#">Audio and Subtitles</a></li>
-          <li><a href="#">Audio Description</a></li>
-          <li><a href="#">Help Center</a></li>
-          <li><a href="#">Gift Cards</a></li>
-          <li><a href="#">Media Center</a></li>
-          <li><a href="#">Investor Relations</a></li>
-          <li><a href="#">Jobs</a></li>
-          <li><a href="#">Terms of Use</a></li>
-          <li><a href="#">Privacy</a></li>
-          <li><a href="#">Legal Notices</a></li>
-          <li><a href="#">Corporate Information</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </div>
-    </section>
-    <!-- END OF LINKS -->
-
+</div>
+<!-- END OF HEADER -->

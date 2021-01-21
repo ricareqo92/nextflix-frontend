@@ -3,7 +3,7 @@
     <div class="row mt-5">
       <div *ngFor="let movie of movies" class="col-md-3">
         <div class="card w-100 mb-5 shadow-custom" style="width: 18rem;">
-          <img [src]="baseUrl + movie.poster_path" class="card-img-top" alt="...">
+          <a [routerLink]="['/movie-detail', movie.id]"><img [src]="baseUrl + movie.poster_path" class="card-img-top" alt="..."></a>
           <div class="card-body">
             <a (click)="deleteMovie(movie.id)" class="btn btn-danger">Borrar</a>
           </div>

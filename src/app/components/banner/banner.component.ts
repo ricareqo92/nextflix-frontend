@@ -24,19 +24,19 @@ export class BannerComponent implements OnInit {
     console.log("the event", e)
   }
   getMovieFirst(){
-  this._movieService.getTrending()
-  .subscribe(
-    res => {
-      this. movie = res.results[0];
-      this. moviePop = res
-
-      console.log("res: ", this. movie);
-
-  },
-  err => {
-
-  });
-}
+    this._movieService.getTrending()
+    .subscribe(
+      res => {
+        this. movie =res.results[0];
+        this. moviePop = res
+        document.getElementById('banner').style.backgroundImage = 'url("https://image.tmdb.org/t/p/w300_and_h450_bestv2' + this.movie.poster_path + '")';
+        console.log("res: ", this. movie, this. moviePop);
+  
+    },
+    err => {
+  
+    });
+  }
 
 getMoviePopular(){
   this._movieService.getTvPopular()

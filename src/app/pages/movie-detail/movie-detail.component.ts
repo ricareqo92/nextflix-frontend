@@ -13,7 +13,8 @@ export class MovieDetailComponent implements OnInit {
 
   baseUrl: String;
   movie: any;
-
+  date: String;
+  
   constructor(
     private _movieService: MovieService,
     private _route: ActivatedRoute,
@@ -31,8 +32,12 @@ export class MovieDetailComponent implements OnInit {
         this._movieService.getMovieDetail(movieId)
           .subscribe(
             res => {
+              let aux;
               this.movie = res;
               this.baseUrl += this.movie.poster_path;
+              
+              aux = this.movie.release_date.split('-');
+              this.date = aux[0];
             },
             err => {
               console.log(err);
