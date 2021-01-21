@@ -20,8 +20,6 @@ export class MoviesFavoriteComponent implements OnInit {
   ngOnInit() {
     this.store.subscribe(state => {
       this.movies = state.movie;
-
-      console.log("movies: ", state);
     });
   }
 

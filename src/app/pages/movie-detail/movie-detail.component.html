@@ -1,61 +1,46 @@
-<div style="width: 60%; margin: auto;">
-    <section class="tv-content">
-        <div class="bg">
-          <div class="content">
-            <div class="image">
-              <img [src]="baseUrl" />
+<section>
+  <div class="container-detail">
+    <div class="image-detail">
+      <img [src]="baseUrl" alt="">
+    </div>
+    <div *ngIf="movie" class="info-detail">
+      <div class="title">
+        <a href="#">
+          <h2>Avengers: Endgame</h2>
+        </a>
+        <span>(2019)</span>
+      </div>
+      <div class="meta-actions">
+        <div class="score">
+          <div class="percentage-circle">
+            <div class="percentage-circle-stroke">
+              <div class="percent">
+                <span>{{ movie.vote_average * 10 }}%
+                </span>
+              </div>
             </div>
-            <div *ngIf="movie" class="info">
-              <div class="title">
-                <a href="#">
-                  <h3>{{ movie.title }}</h3>
-                </a>
-                <span>(2019)</span>
-              </div>
-              <div class="meta-actions">
-                <div class="score">
-                  <div class="percentage-circle">
-                    <div class="percentage-circle-stroke">
-                      <div class="percent">
-                        <span>{{ movie.vote_average * 10 }}<sup>%</sup>
-                        </span>
-                      </div>
-                    </div>
-                  </div>
-                  <h1>User
-                    Score</h1>
-                </div>
-                <ul>
-                  <li class="add-to-list">
-                    <a (click)="deleteMovie(movie.id)"><i class="fas fa-list"></i></a>
-                  </li>
-                  <li class="favorite">
-                    <a (click)="addFavorite()"><i class="fas fa-heart"></i></a>
-                  </li>
-                  <li class="play-trailer">
-                    <span><i class="fas fa-play"></i></span>
-                    <a href="#">Play Trailer</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="about">
-                    <div class="overview">
-                        <h3>Overview</h3>
-                        <p>{{ movie.overview }}</p>
-                    </div>
-                    <div class="featured-crew">
-                    <h3>Featured Crew</h3>
-                        <ul>
-                            <li>
-                                    <a href="#">John Waine</a>
-                                    <h1>Director</h1>
-                            </li>
-            
-                        </ul>
-                    </div>
-                </div>
+          </div>
+          <h1>Valoración</h1>
+        </div>
+        <ul>
+          <li class="add-to-list">
+            <a [routerLink]="['/movies-favorite']"><i class="fas fa-list"></i></a>
+          </li>
+          <li class="favorite">
+            <a (click)="addFavorite()"><i class="fas fa-heart"></i></a>
+          </li>
+          <li class="play-trailer">
+            <span><i class="fas fa-play"></i></span>
+            <a href="#">Play Trailer</a>
+          </li>
+        </ul>
+        </div>
+        <div class="about">
+          <div>
+            <h3>Resumen</h3>
+            <p>{{ movie.overview }}</p>
+          </div>
       </div>
     </div>
-    </div>
-    </section>
-</div>
+  </div>
+</section>

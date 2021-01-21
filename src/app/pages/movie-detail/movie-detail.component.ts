@@ -23,10 +23,6 @@ export class MovieDetailComponent implements OnInit {
     }
 
   ngOnInit() {
-
-    this.store.subscribe(state => {
-      console.log("state: ", state);
-    })
     // Sacar el id del user de la url
     this._route.params.subscribe(
       params => {
@@ -35,7 +31,6 @@ export class MovieDetailComponent implements OnInit {
         this._movieService.getMovieDetail(movieId)
           .subscribe(
             res => {
-              console.log(res);
               this.movie = res;
               this.baseUrl += this.movie.poster_path;
             },
@@ -48,18 +43,11 @@ export class MovieDetailComponent implements OnInit {
   }
 
   addFavorite() {
-    console.log("movie: ", this.movie);
     let action = new AddAction(this.movie);
     this.store.dispatch(action);
     let movies = JSON.parse(localStorage.getItem('movies'));
-
-    console.log("movies: ", movies);
     movies.push(this.movie);
     localStorage.setItem('movies', JSON.stringify(movies));
-  }
-
-  viewList() {
-    
   }
 
 }
